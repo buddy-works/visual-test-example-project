@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@buddy-works/visual-test-cli':
-        specifier: ^0.0.22
-        version: 0.0.22
+        specifier: ^0.0.23
+        version: 0.0.23
       '@buddy-works/visual-test-cypress-plugin':
         specifier: ^0.0.4
         version: 0.0.4
@@ -54,8 +54,8 @@ packages:
     resolution: {integrity: sha512-EStJpq4OuY8xYfhGVXngigBJRWxftKX9ksiGDnmlY3o7B/V7KIAc9X4oiK87uPJSc/vs5L869bem5fhZa8caZw==}
     engines: {node: '>=6.9.0'}
 
-  '@buddy-works/visual-test-cli@0.0.22':
-    resolution: {integrity: sha512-QXffk/jSlHBHcJX4+9czieZa73MReSXw4CbjtCt0VVngtVDd5AxaqX+v7YPPx1dZacXJp1Cp/q0v1ci+KzLyUA==, tarball: https://npm.pkg.github.com/download/@buddy-works/visual-test-cli/0.0.22/2d6582debfef96f4150d935197b80f2e56489c97}
+  '@buddy-works/visual-test-cli@0.0.23':
+    resolution: {integrity: sha512-4spKootQ4YKxN2TogC4h3NQEGeNljpMvzPHLmfDo4nQwYDg2tCWWR6Z+OznowOBM8gy0FeuS79qiAKhYnDT01w==, tarball: https://npm.pkg.github.com/download/@buddy-works/visual-test-cli/0.0.23/11ff4ecfea87846015de76c34dd92a0905e6459b}
     engines: {node: '>=18.20.0'}
     hasBin: true
 
@@ -1591,7 +1591,7 @@ snapshots:
       js-tokens: 4.0.0
       picocolors: 1.0.1
 
-  '@buddy-works/visual-test-cli@0.0.22':
+  '@buddy-works/visual-test-cli@0.0.23':
     dependencies:
       '@fastify/cors': 9.0.1
       chalk: 5.3.0
@@ -1737,7 +1737,7 @@ snapshots:
 
   agent-base@7.1.1:
     dependencies:
-      debug: 4.3.4(supports-color@8.1.1)
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -2274,7 +2274,7 @@ snapshots:
       proxy-addr: 2.0.7
       rfdc: 1.3.0
       secure-json-parse: 2.7.0
-      semver: 7.5.4
+      semver: 7.6.0
       toad-cache: 3.3.0
 
   fastq@1.15.0:
@@ -2374,7 +2374,7 @@ snapshots:
     dependencies:
       basic-ftp: 5.0.5
       data-uri-to-buffer: 6.0.2
-      debug: 4.3.4(supports-color@8.1.1)
+      debug: 4.3.6
       fs-extra: 11.2.0
     transitivePeerDependencies:
       - supports-color
@@ -2440,7 +2440,7 @@ snapshots:
   http-proxy-agent@7.0.2:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.4(supports-color@8.1.1)
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -2453,7 +2453,7 @@ snapshots:
   https-proxy-agent@7.0.5:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.4(supports-color@8.1.1)
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -2706,7 +2706,7 @@ snapshots:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.1
-      debug: 4.3.4(supports-color@8.1.1)
+      debug: 4.3.6
       get-uri: 6.0.3
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
@@ -2830,7 +2830,7 @@ snapshots:
   proxy-agent@6.4.0:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.4(supports-color@8.1.1)
+      debug: 4.3.6
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
       lru-cache: 7.18.3
@@ -3009,7 +3009,7 @@ snapshots:
   socks-proxy-agent@8.0.4:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.4(supports-color@8.1.1)
+      debug: 4.3.6
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color

@@ -1,10 +1,10 @@
 describe("snapshot example", () => {
-  // it("Take snapshot 1", () => {
-  //   cy.visit('/');
-  //   new Array(10).fill("").forEach((_, index) => {
-  //     cy.takeSnap(`Snapshot ${index}`);
-  //   });
-  // });
+  it("Take snapshot 1", () => {
+    cy.visit('/');
+    new Array(10).fill("").forEach((_, index) => {
+      cy.takeSnap(`Snapshot ${index}`);
+    });
+  });
   //
   // it("Take snapshot 2", () => {
   //   Cypress.on("uncaught:exception", (err, runnable) => {
@@ -16,13 +16,13 @@ describe("snapshot example", () => {
   //   cy.takeSnap("Snapshot 2");
   // });
   //
-  it("Take snapshot 2", () => {
-    cy.visit("/page");
-    cy.wait(1000);
-    new Array(10).fill("").forEach((_, index) => {
-      cy.takeSnap(`Group/Snapshot2 ${index}`);
-    });
-  });
+  // it("Take snapshot 2", () => {
+  //   cy.visit("/page");
+  //   cy.wait(1000);
+  //   new Array(5).fill("").forEach((_, index) => {
+  //     cy.takeSnap(`Group/Snapshot2 ${index}`);
+  //   });
+  // });
   //
   // it("Take snapshot 4", () => {
   //   cy.visit("https://buddy.works/blog");

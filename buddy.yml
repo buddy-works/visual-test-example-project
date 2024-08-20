@@ -1,4 +1,4 @@
-- pipeline: "Run tests"
+- pipeline: "Run tests SD9"
   on: "CLICK"
   refs:
     - "refs/heads/main"
@@ -38,7 +38,7 @@
         - "    && service dbus start \\"
         - "    && rm -rf /var/lib/apt/lists/*"
       shell: "BASH"
-- pipeline: "Run tests STORYBOOK"
+- pipeline: "Run tests SD9 STORYBOOK"
   on: "CLICK"
   refs:
     - "refs/heads/main"
@@ -78,7 +78,7 @@
         - "    && service dbus start \\"
         - "    && rm -rf /var/lib/apt/lists/*"
       shell: "BASH"
-- pipeline: "Run tests dev"
+- pipeline: "Run tests SD9 dev"
   on: "CLICK"
   refs:
     - "refs/heads/dev"
@@ -118,7 +118,7 @@
         - "    && service dbus start \\"
         - "    && rm -rf /var/lib/apt/lists/*"
       shell: "BASH"
-- pipeline: "Run tests dev STORYBOOK"
+- pipeline: "Run tests SD9 dev STORYBOOK"
   on: "CLICK"
   refs:
     - "refs/heads/dev"
@@ -145,6 +145,46 @@
         - "cd storybook"
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
         - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
+        - "npm run test"
+      setup_commands:
+        - "apt-get update \\ "
+        - "    && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb wget gnupg \\"
+        - "    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/googlechrome-linux-keyring.gpg \\"
+        - "    && sh -c 'echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/googlechrome-linux-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list' \\"
+        - "    && apt-get update \\"
+        - "    && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-khmeros fonts-kacst fonts-freefont-ttf libxss1 dbus dbus-x11 \\"
+        - "      --no-install-recommends \\"
+        - "    && service dbus start \\"
+        - "    && rm -rf /var/lib/apt/lists/*"
+      shell: "BASH"
+- pipeline: "Run tests LOCAL dev STORYBOOK"
+  on: "CLICK"
+  refs:
+    - "refs/heads/dev"
+  fail_on_prepare_env_warning: true
+  actions:
+    - action: "Install packages"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "cd storybook"
+        - "pnpm i --no-frozen-lockfile"
+        - "pnpm run build-storybook"
+      setup_commands:
+        - "npm i pnpm -g"
+      volume_mappings:
+        - "/:/buddy/visual-test-example-project"
+      shell: "BASH"
+    - action: "Run tests"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "cd storybook"
+        - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
+        - "export SNAPSHOTS_SERVICE_URL=http://localhost:3000"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "npm run test"
       setup_commands:

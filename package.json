@@ -17,7 +17,7 @@
     "prettier": "3.0.3"
   },
   "dependencies": {
-    "@buddy-works/visual-test-cli": "^0.0.22",
+    "@buddy-works/visual-test-cli": "^0.0.23",
     "@buddy-works/visual-test-cypress-plugin": "^0.0.4",
     "@fastify/cors": "8.4.0",
     "@fastify/static": "6.11.2",

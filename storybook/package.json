@@ -17,7 +17,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@buddy-works/visual-test-cli": "^0.0.22",
+    "@buddy-works/visual-test-cli": "^0.0.23",
     "@chromatic-com/storybook": "^1.6.1",
     "@eslint/js": "^9.8.0",
     "@storybook/addon-essentials": "^8.2.8",
