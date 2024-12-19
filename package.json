@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node './server.js'",
-    "cy-test": "visual-test-cli exec \"npx cypress run\"",
+    "cy-test": "bdy vt exec \"npx cypress run\"",
     "test": "start-server-and-test start http://localhost:4322 cy-test",
     "test-ci": "start-server-and-test start http://0.0.0.0:4322 cy-test"
   },
@@ -17,7 +17,7 @@
     "prettier": "3.0.3"
   },
   "dependencies": {
-    "@buddy-works/visual-test-cli": "^0.0.23",
+    "bdy": "1.8.15-dev",
     "@buddy-works/visual-test-cypress-plugin": "^0.0.4",
     "@fastify/cors": "8.4.0",
     "@fastify/static": "6.11.2",

@@ -10,14 +10,14 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "cd storybook-static && visual-test-cli storybook"
+    "test": "cd storybook-static && bdy vt storybook"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@buddy-works/visual-test-cli": "^0.0.23",
+    "bdy": "1.8.15-dev",
     "@chromatic-com/storybook": "^1.6.1",
     "@eslint/js": "^9.8.0",
     "@storybook/addon-essentials": "^8.2.8",
