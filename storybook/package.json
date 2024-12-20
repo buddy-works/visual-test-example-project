@@ -17,7 +17,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "bdy": "1.8.15-dev",
+    "bdy": "1.8.16-dev",
     "@chromatic-com/storybook": "^1.6.1",
     "@eslint/js": "^9.8.0",
     "@storybook/addon-essentials": "^8.2.8",

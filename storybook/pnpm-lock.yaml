@@ -55,8 +55,8 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1(vite@5.4.0(@types/node@22.1.0))
       bdy:
-        specifier: 1.8.15-dev
-        version: 1.8.15-dev
+        specifier: 1.8.16-dev
+        version: 1.8.16-dev
       eslint:
         specifier: ^9.8.0
         version: 9.8.0
@@ -1719,8 +1719,8 @@ packages:
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
 
-  bdy@1.8.15-dev:
-    resolution: {integrity: sha512-Ikb+5ogAj4MBoEA7gd948NZ40gSBABLJuIDkSowFUl/V+ZiGx2sp/bhXo70IOE4NYC8uLJPho6NOE6/nuZ4/Vw==}
+  bdy@1.8.16-dev:
+    resolution: {integrity: sha512-xoxqWNC2xbcmokGTywGJvzFf4c0GVQjTLd9EJIj5d/909HS+vyPQIlWrJ5WCCYvqHFzNFxbc+WupFesX94wVwg==}
     hasBin: true
 
   binary-extensions@2.3.0:
@@ -4107,7 +4107,7 @@ snapshots:
       '@babel/core': 7.25.2
       '@babel/helper-compilation-targets': 7.25.2
       '@babel/helper-plugin-utils': 7.24.8
-      debug: 4.3.6
+      debug: 4.4.0
       lodash.debounce: 4.0.8
       resolve: 1.22.8
     transitivePeerDependencies:
@@ -5062,7 +5062,7 @@ snapshots:
 
   '@puppeteer/browsers@2.4.0':
     dependencies:
-      debug: 4.3.6
+      debug: 4.4.0
       extract-zip: 2.0.1
       progress: 2.0.3
       proxy-agent: 6.4.0
@@ -5299,7 +5299,7 @@ snapshots:
       '@storybook/core': 8.2.8
       '@storybook/csf': 0.1.11
       '@types/cross-spawn': 6.0.6
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.6
       globby: 14.0.2
       jscodeshift: 0.15.2(@babel/preset-env@7.25.3(@babel/core@7.25.2))
       lodash: 4.17.21
@@ -5832,7 +5832,7 @@ snapshots:
 
   agent-base@7.1.1:
     dependencies:
-      debug: 4.3.6
+      debug: 4.4.0
     transitivePeerDependencies:
       - supports-color
 
@@ -5979,7 +5979,7 @@ snapshots:
     dependencies:
       tweetnacl: 0.14.5
 
-  bdy@1.8.15-dev:
+  bdy@1.8.16-dev:
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       '@fastify/cors': 9.0.1
@@ -6349,7 +6349,7 @@ snapshots:
 
   esbuild-register@3.6.0(esbuild@0.21.5):
     dependencies:
-      debug: 4.3.6
+      debug: 4.4.0
       esbuild: 0.21.5
     transitivePeerDependencies:
       - supports-color
@@ -6504,7 +6504,7 @@ snapshots:
 
   execa@5.1.1:
     dependencies:
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.6
       get-stream: 6.0.1
       human-signals: 2.1.0
       is-stream: 2.0.1
@@ -6516,7 +6516,7 @@ snapshots:
 
   execa@8.0.1:
     dependencies:
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.6
       get-stream: 8.0.1
       human-signals: 5.0.0
       is-stream: 3.0.0
@@ -6564,7 +6564,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.6
+      debug: 4.4.0
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -6780,7 +6780,7 @@ snapshots:
     dependencies:
       basic-ftp: 5.0.5
       data-uri-to-buffer: 6.0.2
-      debug: 4.3.6
+      debug: 4.4.0
       fs-extra: 11.2.0
     transitivePeerDependencies:
       - supports-color
@@ -6897,14 +6897,14 @@ snapshots:
   http-proxy-agent@7.0.2:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.6
+      debug: 4.4.0
     transitivePeerDependencies:
       - supports-color
 
   https-proxy-agent@7.0.5:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.6
+      debug: 4.4.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7417,7 +7417,7 @@ snapshots:
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.1
-      debug: 4.3.6
+      debug: 4.4.0
       get-uri: 6.0.3
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
@@ -7581,7 +7581,7 @@ snapshots:
   proxy-agent@6.4.0:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.6
+      debug: 4.4.0
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
       lru-cache: 7.18.3
@@ -7943,7 +7943,7 @@ snapshots:
   socks-proxy-agent@8.0.4:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.6
+      debug: 4.4.0
       socks: 2.8.3
     transitivePeerDependencies:
       - supports-color
