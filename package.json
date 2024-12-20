@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "bdy": "1.8.16-dev",
-    "@buddy-works/visual-test-cypress-plugin": "^0.0.4",
+    "@buddy-works/cypress": "^0.0.5",
     "@fastify/cors": "8.4.0",
     "@fastify/static": "6.11.2",
     "cypress": "13.3.1",

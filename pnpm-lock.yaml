@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@buddy-works/visual-test-cypress-plugin':
-        specifier: ^0.0.4
-        version: 0.0.4
+      '@buddy-works/cypress':
+        specifier: ^0.0.5
+        version: 0.0.5
       '@fastify/cors':
         specifier: 8.4.0
         version: 8.4.0
@@ -42,8 +42,8 @@ importers:
 
 packages:
 
-  '@buddy-works/visual-test-cypress-plugin@0.0.4':
-    resolution: {integrity: sha512-zHfDYf2nfwaC/7jBtuD28THLpZQx77ov2cRktAjVPVsdKbd61OjJcKdIBC5gRixsOYl0keWelTFjnvYzmPRKEg==, tarball: https://npm.pkg.github.com/download/@buddy-works/visual-test-cypress-plugin/0.0.4/46d8be77eee5212af51a80140643616bba04d0a3}
+  '@buddy-works/cypress@0.0.5':
+    resolution: {integrity: sha512-f36sJcwDV8eV82eHEUnZ4/6j/nrNo3gNpAneztjM8ZasM74iMKWtG9oBuu0mhI4gYyP1lWjr3rUBnCb+OmWXhA==}
     engines: {node: '>=18.0.0'}
 
   '@colors/colors@1.5.0':
@@ -1765,7 +1765,7 @@ packages:
 
 snapshots:
 
-  '@buddy-works/visual-test-cypress-plugin@0.0.4': {}
+  '@buddy-works/cypress@0.0.5': {}
 
   '@colors/colors@1.5.0':
     optional: true
