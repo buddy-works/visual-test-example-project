@@ -16,6 +16,6 @@ pnpm run test
 ```
 export NODE_TLS_REJECT_UNAUTHORIZED=0
 export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com
-export SNAPSHOTS_TOKEN=token visual test projektu
+export BUDDY_VT_TOKEN=token visual test projektu
 pnpm run test-ci
 ```

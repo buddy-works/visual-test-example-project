@@ -25,8 +25,128 @@
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
         - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
-        - "export CYPRESS_CACHE_FOLDER=/buddy/visual-test-example-project/root/.cache/Cypress"
+        - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
         - "npm run test-ci"
+      setup_commands:
+        - "apt-get update \\ "
+        - "    && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb wget gnupg \\"
+        - "    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/googlechrome-linux-keyring.gpg \\"
+        - "    && sh -c 'echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/googlechrome-linux-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list' \\"
+        - "    && apt-get update \\"
+        - "    && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-khmeros fonts-kacst fonts-freefont-ttf libxss1 dbus dbus-x11 \\"
+        - "      --no-install-recommends \\"
+        - "    && service dbus start \\"
+        - "    && rm -rf /var/lib/apt/lists/*"
+      shell: "BASH"
+- pipeline: "Run tests SD9 error"
+  on: "CLICK"
+  refs:
+    - "refs/heads/main"
+  fail_on_prepare_env_warning: true
+  actions:
+    - action: "Install packages"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "pnpm i --no-frozen-lockfile"
+        - "npx cypress install --force"
+      setup_commands:
+        - "npm i pnpm -g"
+      volume_mappings:
+        - "/:/buddy/visual-test-example-project"
+        - "/root/.cache/Cypress:/root/.cache/Cypress"
+      shell: "BASH"
+    - action: "Run tests"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
+        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
+        - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
+        - "npm run test-ci-error"
+      setup_commands:
+        - "apt-get update \\ "
+        - "    && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb wget gnupg \\"
+        - "    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/googlechrome-linux-keyring.gpg \\"
+        - "    && sh -c 'echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/googlechrome-linux-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list' \\"
+        - "    && apt-get update \\"
+        - "    && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-khmeros fonts-kacst fonts-freefont-ttf libxss1 dbus dbus-x11 \\"
+        - "      --no-install-recommends \\"
+        - "    && service dbus start \\"
+        - "    && rm -rf /var/lib/apt/lists/*"
+      shell: "BASH"
+- pipeline: "Run tests SD9 nested"
+  on: "CLICK"
+  refs:
+    - "refs/heads/main"
+  fail_on_prepare_env_warning: true
+  actions:
+    - action: "Install packages"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "pnpm i --no-frozen-lockfile"
+        - "npx cypress install --force"
+      setup_commands:
+        - "npm i pnpm -g"
+      volume_mappings:
+        - "/:/buddy/visual-test-example-project"
+        - "/root/.cache/Cypress:/root/.cache/Cypress"
+      shell: "BASH"
+    - action: "Run tests"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
+        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
+        - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
+        - "npm run test-ci-nested"
+      setup_commands:
+        - "apt-get update \\ "
+        - "    && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb wget gnupg \\"
+        - "    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/googlechrome-linux-keyring.gpg \\"
+        - "    && sh -c 'echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/googlechrome-linux-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list' \\"
+        - "    && apt-get update \\"
+        - "    && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-khmeros fonts-kacst fonts-freefont-ttf libxss1 dbus dbus-x11 \\"
+        - "      --no-install-recommends \\"
+        - "    && service dbus start \\"
+        - "    && rm -rf /var/lib/apt/lists/*"
+      shell: "BASH"
+- pipeline: "Run tests SD9 crop"
+  on: "CLICK"
+  refs:
+    - "refs/heads/main"
+  fail_on_prepare_env_warning: true
+  actions:
+    - action: "Install packages"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "pnpm i --no-frozen-lockfile"
+        - "npx cypress install --force"
+      setup_commands:
+        - "npm i pnpm -g"
+      volume_mappings:
+        - "/:/buddy/visual-test-example-project"
+        - "/root/.cache/Cypress:/root/.cache/Cypress"
+      shell: "BASH"
+    - action: "Run tests"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
+        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
+        - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
+        - "npm run test-ci-crop"
       setup_commands:
         - "apt-get update \\ "
         - "    && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb wget gnupg \\"
@@ -78,6 +198,44 @@
         - "    && service dbus start \\"
         - "    && rm -rf /var/lib/apt/lists/*"
       shell: "BASH"
+- pipeline: "Run tests SD9 STORYBOOK REACT NATIVE"
+  on: "CLICK"
+  refs:
+    - "refs/heads/main"
+  fail_on_prepare_env_warning: true
+  actions:
+    - action: "Install packages"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "cd storybook-react-native"
+        - "npm i"
+        - "npm run build-storybook"
+      volume_mappings:
+        - "/:/buddy/visual-test-example-project"
+      shell: "BASH"
+    - action: "Run tests"
+      type: "BUILD"
+      docker_image_name: "library/node"
+      docker_image_tag: "20"
+      execute_commands:
+        - "cd storybook-react-native"
+        - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
+        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
+        - "npm run test"
+      setup_commands:
+        - "apt-get update \\ "
+        - "    && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb wget gnupg \\"
+        - "    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/googlechrome-linux-keyring.gpg \\"
+        - "    && sh -c 'echo \"deb [arch=amd64 signed-by=/usr/share/keyrings/googlechrome-linux-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main\" >> /etc/apt/sources.list.d/google.list' \\"
+        - "    && apt-get update \\"
+        - "    && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-khmeros fonts-kacst fonts-freefont-ttf libxss1 dbus dbus-x11 \\"
+        - "      --no-install-recommends \\"
+        - "    && service dbus start \\"
+        - "    && rm -rf /var/lib/apt/lists/*"
+      shell: "BASH"
 - pipeline: "Run tests SD9 dev"
   on: "CLICK"
   refs:
@@ -105,7 +263,7 @@
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
         - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
-        - "export CYPRESS_CACHE_FOLDER=/buddy/visual-test-example-project/root/.cache/Cypress"
+        - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
         - "npm run test-ci"
       setup_commands:
         - "apt-get update \\ "

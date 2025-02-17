@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      customElements.define(
+        "my-clock",
+        class extends HTMLElement {
+          #internals = null;
+          constructor() {
+            super();
+            this.#internals = this.attachInternals();
+            if (!this.#internals.shadowRoot) {
+              // If we don't have SSR content, build the shadow root
+              this.attachShadow({ mode: "open" }).innerHTML = `
+          <style> Clock styles here </style>
+          <div>
+            <span id=hour></span> : <span id=min></span> : <span id=sec></span>
+          </div>
+        `;
+            }
+            const shadow = this.#internals.shadowRoot;
+            this.hours = shadow.querySelector("#hour");
+            this.minutes = shadow.querySelector("#min");
+            this.seconds = shadow.querySelector("#sec");
+          }
+
+          connectedCallback() {
+            this.update();
+            this.interval = setInterval(() => this.update(), 1000);
+          }
+
+          disconnectedCallback() {
+            clearInterval(this.interval);
+          }
+
+          update() {
+            const pad = (v) => {
+              return String(v).padStart(2, "0");
+            };
+            const d = new Date();
+            this.hours.textContent = pad(d.getHours());
+            this.minutes.textContent = pad(d.getMinutes());
+            this.seconds.textContent = pad(d.getSeconds());
+          }
+        }
+      );
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const box = document.getElementById('box');
+        const fragment = document.createDocumentFragment();
+        
+        for(let i = 0; i < 900; i++) {
+          const div = document.createElement('div');
+          div.style.width = '100px';
+          div.style.height = '100px';
+          div.style.display = 'inline-block';
+          div.style.margin = '2px';
+          div.style.fontSize = '8px';
+          div.style.textAlign = 'center';
+          div.style.lineHeight = '10px';
+          div.style.color='white';
+          div.textContent = i;
+          div.id = `div-${i}`;
+          // Generate patterned RGB colors based on index
+          const r = i % 256;
+          const g = Math.floor((i / 256)) % 256;
+          const b = Math.floor((i / 65536)) % 256;
+          div.style.backgroundColor = i === 500 ? 'orange' : `rgb(${r},${g},${b})`;
+          fragment.appendChild(div);
+        }
+        
+        box.appendChild(fragment);
+      });
+    </script>
+  </head>
+  <body>
+    <h1 class="lama">Test site123467</h1>
+    <h2>Input</h2>
+    <label>Test text input</label>
+    <input id="input" type="text" />
+    <div id="box" style="display: flex; flex-wrap: wrap;"></div>
+    <div>last element</div>
+  </body>
+</html>

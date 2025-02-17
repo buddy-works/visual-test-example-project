@@ -5,9 +5,18 @@
   "main": "server.js",
   "scripts": {
     "start": "node './server.js'",
-    "cy-test": "bdy vt exec \"npx cypress run\"",
+    "cy-test": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/snapshotTest.cy.js'\"",
+    "cy-test-error": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/errorTest.cy.js'\"",
+    "cy-test-nested": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/nestedTest.cy.js'\"",
+    "cy-test-crop": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/cropTest.cy.js'\"",
     "test": "start-server-and-test start http://localhost:4322 cy-test",
-    "test-ci": "start-server-and-test start http://0.0.0.0:4322 cy-test"
+    "test-error": "start-server-and-test start http://localhost:4322 cy-test-error",
+    "test-nested": "start-server-and-test start http://localhost:4322 cy-test-nested",
+    "test-crop": "start-server-and-test start http://localhost:4322 cy-test-crop",
+    "test-ci": "start-server-and-test start http://0.0.0.0:4322 cy-test",
+    "test-ci-error": "start-server-and-test start http://0.0.0.0:4322 cy-test-error",
+    "test-ci-nested": "start-server-and-test start http://0.0.0.0:4322 cy-test-nested",
+    "test-ci-crop": "start-server-and-test start http://0.0.0.0:4322 cy-test-crop"
   },
   "author": "",
   "license": "ISC",
@@ -17,10 +26,10 @@
     "prettier": "3.0.3"
   },
   "dependencies": {
-    "bdy": "1.8.16-dev",
     "@buddy-works/cypress": "^0.0.5",
     "@fastify/cors": "8.4.0",
     "@fastify/static": "6.11.2",
+    "bdy": "1.8.42-dev",
     "cypress": "13.3.1",
     "fastify": "4.24.2",
     "start-server-and-test": "^2.0.3"
