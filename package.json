@@ -29,7 +29,7 @@
     "@buddy-works/cypress": "^0.0.5",
     "@fastify/cors": "8.4.0",
     "@fastify/static": "6.11.2",
-    "bdy": "1.8.16-dev",
+    "bdy": "1.8.42-dev",
     "cypress": "13.3.1",
     "fastify": "4.24.2",
     "start-server-and-test": "^2.0.3"
