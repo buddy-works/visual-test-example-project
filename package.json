@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node './server.js'",
-    "cy-test": "/Users/bartoszwrobel/WebstormProjects/tunnels/cli/dist/bdy vt exec --oneByOne \"npx cypress run --spec 'cypress/e2e/snapshotTest.cy.js'\"",
+    "cy-test": "bdy vt exec --oneByOne \"npx cypress run --spec 'cypress/e2e/snapshotTest.cy.js'\"",
     "cy-test-error": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/errorTest.cy.js'\"",
     "cy-test-nested": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/nestedTest.cy.js'\"",
     "cy-test-crop": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/cropTest.cy.js'\"",
