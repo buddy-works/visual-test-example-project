@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node './server.js'",
-    "cy-test": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/snapshotTest.cy.js'\"",
+    "cy-test": "/Users/bartoszwrobel/WebstormProjects/tunnels/cli/dist/bdy vt exec --oneByOne \"npx cypress run --spec 'cypress/e2e/snapshotTest.cy.js'\"",
     "cy-test-error": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/errorTest.cy.js'\"",
     "cy-test-nested": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/nestedTest.cy.js'\"",
     "cy-test-crop": "bdy vt exec \"npx cypress run --spec 'cypress/e2e/cropTest.cy.js'\"",
@@ -29,7 +29,7 @@
     "@buddy-works/cypress": "^0.0.5",
     "@fastify/cors": "8.4.0",
     "@fastify/static": "6.11.2",
-    "bdy": "1.8.42-dev",
+    "bdy": "1.8.50-dev",
     "cypress": "13.3.1",
     "fastify": "4.24.2",
     "start-server-and-test": "^2.0.3"
