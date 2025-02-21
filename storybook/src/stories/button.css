@@ -28,3 +28,16 @@
   font-size: 16px;
   padding: 12px 24px;
 }
+
+
+@media (prefers-color-scheme: dark) {
+  .storybook-button--primary {
+    color: white;
+    background-color: #0066cc;
+  }
+  .storybook-button--secondary {
+    color: white;
+    background-color: orange;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  }
+}
