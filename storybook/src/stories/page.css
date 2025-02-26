@@ -67,3 +67,31 @@
 .storybook-page .tip-wrapper svg path {
   fill: #1ea7fd;
 }
+
+@media (prefers-color-scheme: dark) {
+  .storybook-page {
+    background-color: #1a1a1a;
+    color: #e2e8f0;
+  }
+
+  .storybook-page h2 {
+    color: #f8fafc;
+  }
+
+  .storybook-page a {
+    color: #38bdf8;
+  }
+
+  .storybook-page .tip {
+    background: #064e3b;
+    color: #4ade80;
+  }
+
+  .storybook-page .tip-wrapper {
+    color: #d1d5db;
+  }
+
+  .storybook-page .tip-wrapper svg path {
+    fill: #38bdf8;
+  }
+}

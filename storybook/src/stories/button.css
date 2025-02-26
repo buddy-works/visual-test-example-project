@@ -8,8 +8,8 @@
   line-height: 1;
 }
 .storybook-button--primary {
-  color: gray;
-  background-color: #1ea7fd;
+  color: white;
+  background-color: #3b82f6;
 }
 .storybook-button--secondary {
   color: #333;
@@ -33,11 +33,11 @@
 @media (prefers-color-scheme: dark) {
   .storybook-button--primary {
     color: white;
-    background-color: #0066cc;
+    background-color: #4f46e5;
   }
   .storybook-button--secondary {
-    color: white;
-    background-color: orange;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    color: #1a1a1a;
+    background-color: #e2e8f0;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 0px 1px inset;
   }
 }
