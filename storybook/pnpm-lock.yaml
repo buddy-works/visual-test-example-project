@@ -55,8 +55,8 @@ importers:
         specifier: ^4.3.1
         version: 4.3.1(vite@5.4.0(@types/node@22.1.0))
       bdy:
-        specifier: 1.8.50-dev
-        version: 1.8.50-dev
+        specifier: 1.9.0-dev
+        version: 1.9.0-dev
       eslint:
         specifier: ^9.8.0
         version: 9.8.0
@@ -1719,8 +1719,8 @@ packages:
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
 
-  bdy@1.8.50-dev:
-    resolution: {integrity: sha512-x9/WULYmXjwL4ClRv8zRVRgB1kikW5XuseQc6KBoV89gM0B5pg07MQ+g/8FYwTpy8dshlfDFVQHiuBg6QjAAQg==}
+  bdy@1.9.0-dev:
+    resolution: {integrity: sha512-wvQT6NkM/9AqJsWqmbePnvmZw/ZUXN6BPkzJ9XZAQos7RvU0jcyZys7ILfrdzubmxsb8FMzL7lTGMuqJN1pOwg==}
     hasBin: true
 
   binary-extensions@2.3.0:
@@ -4024,6 +4024,9 @@ packages:
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
+  zod@3.24.2:
+    resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
+
 snapshots:
 
   '@adobe/css-tools@4.4.0': {}
@@ -5983,7 +5986,7 @@ snapshots:
     dependencies:
       tweetnacl: 0.14.5
 
-  bdy@1.8.50-dev:
+  bdy@1.9.0-dev:
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       '@fastify/cors': 9.0.1
@@ -6014,6 +6017,7 @@ snapshots:
       uuid: 10.0.0
       which: 4.0.0
       ws: 8.18.0
+      zod: 3.24.2
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -8416,3 +8420,5 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   zod@3.23.8: {}
+
+  zod@3.24.2: {}
