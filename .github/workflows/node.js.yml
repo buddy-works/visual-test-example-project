@@ -10,8 +10,8 @@ on:
     branches: [ "main" ]
 
 env:
-  SNAPSHOTS_SERVICE_URL: https://cda0-93-179-255-178.ngrok-free.app
-  BUDDY_VT_TOKEN: bud_vt_us_b88mj7bv5vou0w8n9v3yheijg5vsts
+  SNAPSHOTS_SERVICE_URL: https://a8c4-93-179-255-178.ngrok-free.app
+  BUDDY_VT_TOKEN: bud_vt_us_n00af8rtq3nto0c3qca4ymtczzgcg5
 
 jobs:
   build:
