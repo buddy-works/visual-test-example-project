@@ -382,7 +382,7 @@
       execute_commands:
         - "cd storybook"
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=http://localhost:3000"
+        - "export SNAPSHOTS_SERVICE_URL=http://192.168.10.239:3000"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "npm run test"
       setup_commands:
