@@ -20,6 +20,11 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
+    - name: Cache Cypress 📦
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/Cypress
+        key: my-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
     - uses: pnpm/action-setup@v2
       with:
         version: 9.6.0
