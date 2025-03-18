@@ -29,6 +29,28 @@
   padding: 12px 24px;
 }
 
+.lama {
+  display: none;
+}
+
+@media (min-width: 1900px) {
+  .storybook-button--primary {
+    background-color: orange;
+  }
+  .storybook-button--secondary {
+    color: purple;
+    background-color: sandybrown;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1500px) {
+  .lama {
+    display: block;
+  }
+}
+
+
+
 
 @media (prefers-color-scheme: dark) {
   .storybook-button--primary {

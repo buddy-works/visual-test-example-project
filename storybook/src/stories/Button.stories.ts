@@ -50,3 +50,10 @@ export const Small: Story = {
     label: 'Button',
   },
 };
+
+export const Flaky: Story = {
+  args: {
+    flaky: true,
+    label: 'Button',
+  },
+};
