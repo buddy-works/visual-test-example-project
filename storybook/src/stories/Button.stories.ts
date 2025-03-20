@@ -53,6 +53,7 @@ export const Small: Story = {
 
 export const Flaky: Story = {
   args: {
+    primary: true,
     flaky: true,
     label: 'Button',
   },
