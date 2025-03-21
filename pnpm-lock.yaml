@@ -18,8 +18,8 @@ importers:
         specifier: 8.1.1
         version: 8.1.1
       bdy:
-        specifier: 1.9.8-dev
-        version: 1.9.8-dev
+        specifier: 1.9.9-dev
+        version: 1.9.9-dev
       cypress:
         specifier: 14.1.0
         version: 14.1.0
@@ -331,8 +331,8 @@ packages:
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
 
-  bdy@1.9.8-dev:
-    resolution: {integrity: sha512-ViyzM95noUjY9jHlweK+zE5VL7uzsJP6mlAszIJHvnoWlzv8XfLWi17mvdGBIn2tVhfQzeByLJjl2bjP8USiZw==}
+  bdy@1.9.9-dev:
+    resolution: {integrity: sha512-zrBHIIsrIgclVnvn8ZJTmb/bDUj94YOF/uhneNZux5H04OqB/By63nb2SgdOJ+ONx5dfg50cWPAOrEJgrgYlkg==}
     hasBin: true
 
   binary-extensions@2.2.0:
@@ -2201,7 +2201,7 @@ snapshots:
     dependencies:
       tweetnacl: 0.14.5
 
-  bdy@1.9.8-dev:
+  bdy@1.9.9-dev:
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       '@fastify/cors': 9.0.1
