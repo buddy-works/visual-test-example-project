@@ -55,8 +55,8 @@ importers:
         specifier: 4.3.4
         version: 4.3.4(vite@6.2.1(@types/node@22.1.0))
       bdy:
-        specifier: 1.9.12-dev
-        version: 1.9.12-dev
+        specifier: 1.9.14-dev
+        version: 1.9.14-dev
       eslint:
         specifier: 9.22.0
         version: 9.22.0
@@ -1276,8 +1276,8 @@ packages:
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
 
-  bdy@1.9.12-dev:
-    resolution: {integrity: sha512-Eqqe9ZAoVzaOQyI6mmiDKXX4+5Z0SKRsAg7Gf4i0cO0807zzMYFLaIO5rCrHDZoCIgq/A3BR/KP/HDMH7YLzrw==}
+  bdy@1.9.14-dev:
+    resolution: {integrity: sha512-PwWng5UMcvPjoxanvfComctdPekjt1Lxsubd7BWih/SHpkXvSDezbSGc9HElhUIbbp7ckSGadL2gclmPkrncdQ==}
     hasBin: true
 
   better-opn@3.0.2:
@@ -4168,7 +4168,7 @@ snapshots:
     dependencies:
       tweetnacl: 0.14.5
 
-  bdy@1.9.12-dev:
+  bdy@1.9.14-dev:
     dependencies:
       '@fastify/accept-negotiator': 1.1.0
       '@fastify/cors': 9.0.1
