@@ -30,3 +30,9 @@ export const LoggedIn: Story = {
     await expect(logoutButton).toBeInTheDocument();
   },
 };
+
+export const Broken: Story = {
+  args: {
+    broken: true,
+  },
+};
