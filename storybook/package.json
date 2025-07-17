@@ -17,7 +17,7 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "bdy": "1.9.56-dev",
+    "bdy": "1.9.59-dev",
     "@chromatic-com/storybook": "3.2.5",
     "@eslint/js": "9.22.0",
     "@storybook/addon-essentials": "8.6.4",
