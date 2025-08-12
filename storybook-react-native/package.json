@@ -34,7 +34,7 @@
     "react-native-web": "~0.19.10"
   },
   "devDependencies": {
-    "bdy": "1.9.59-dev",
+    "bdy": "1.10.4",
     "@babel/core": "^7.24.0",
     "@chromatic-com/storybook": "^2.0.2",
     "@expo/metro-runtime": "~3.2.3",
