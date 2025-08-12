@@ -29,11 +29,34 @@ export const Primary: Story = {
     primary: true,
     label: 'Button',
   },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
 };
 
 export const Secondary: Story = {
   args: {
     label: 'Button',
+  },
+  parameters: {
+    viewport: {
+      viewports: {
+        small: {
+          name: "small",
+          styles: {
+            width: "375px",
+            height: "375px",
+          },
+        },
+        medium: {
+          name: "medium",
+          styles: {
+            width: "768px",
+            height: "768px",
+          },
+        },
+      },
+    },
   },
 };
 
@@ -47,6 +70,14 @@ export const Large: Story = {
 export const Small: Story = {
   args: {
     size: 'small',
+    label: 'Button',
+  },
+};
+
+export const Flaky: Story = {
+  args: {
+    primary: true,
+    flaky: true,
     label: 'Button',
   },
 };
