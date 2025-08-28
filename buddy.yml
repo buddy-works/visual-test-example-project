@@ -23,7 +23,7 @@
       docker_image_tag: "20"
       execute_commands:
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
         - "npm run test-ci"
@@ -63,7 +63,7 @@
       docker_image_tag: "20"
       execute_commands:
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
         - "npm run test-ci-error"
@@ -103,7 +103,7 @@
       docker_image_tag: "20"
       execute_commands:
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
         - "npm run test-ci-nested"
@@ -143,7 +143,7 @@
       docker_image_tag: "20"
       execute_commands:
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
         - "npm run test-ci-crop"
@@ -184,7 +184,7 @@
       execute_commands:
         - "cd storybook"
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "npm run test"
       setup_commands:
@@ -222,7 +222,7 @@
       execute_commands:
         - "cd storybook-react-native"
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "npm run test"
       setup_commands:
@@ -261,7 +261,7 @@
       docker_image_tag: "20"
       execute_commands:
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "export CYPRESS_CACHE_FOLDER=$(pwd)/root/.cache/Cypress"
         - "npm run test-ci"
@@ -302,7 +302,7 @@
       execute_commands:
         - "cd storybook"
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sd9.com"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sd9.com"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "npm run test"
       setup_commands:
@@ -342,7 +342,7 @@
       execute_commands:
         - "cd storybook"
         - "export NODE_TLS_REJECT_UNAUTHORIZED=0"
-        - "export SNAPSHOTS_SERVICE_URL=https://visual.sls.io"
+        - "export SNAPSHOTS_SERVICE_URL=https://vt.sls.io"
         - "export SNAPSHOTS_BROWSER_PATH=/usr/bin/google-chrome-stable"
         - "npm run test"
       setup_commands:
