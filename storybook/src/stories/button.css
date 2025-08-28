@@ -9,7 +9,7 @@
 }
 .storybook-button--primary {
   color: white;
-  background-color: #1ea7fd;
+  background-color: #3b82f6;
 }
 .storybook-button--secondary {
   color: #333;
@@ -27,4 +27,34 @@
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
+}
+
+.lama {
+  display: none;
+}
+
+@media (min-width: 1440px) and (max-width: 1500px) {
+  .lama {
+    display: block;
+  }
+} 
+
+
+@media (min-width: 1900px) {
+  .storybook-button--primary.flaky {
+    background-color: orange;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .storybook-button--primary {
+    color: white;
+    background-color: #4f46e5;
+  }
+  .storybook-button--secondary {
+    color: #1a1a1a;
+    background-color: #e2e8f0;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 0px 1px inset;
+  }
 }

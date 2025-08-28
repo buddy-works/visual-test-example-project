@@ -7,11 +7,12 @@ type User = {
   name: string;
 };
 
-export const Page: React.FC = () => {
+export const Page: React.FC = ({ broken = false }: { broken?: boolean }) => {
   const [user, setUser] = React.useState<User>();
 
   return (
-    <article>
+    <article className="storybook-page-wrapper">
+      {broken && <div style={{ width: '100px', height: '200px' }} />}
       <Header
         user={user}
         onLogin={() => setUser({ name: 'Jane Doe' })}
@@ -35,12 +36,64 @@ export const Page: React.FC = () => {
         </p>
         <ul>
           <li>
-            Use a higher-level connected component. Storybook helps you compose such data from the
-            "args" of child component stories
+            Use component composition to build complex UIs. Storybook allows you to nest component
+            stories within each other for hierarchical designs.
           </li>
           <li>
-            Assemble data in the page component from your services. You can mock these services out
-            using Storybook.
+            Implement responsive design patterns with Storybook's viewport addon to test across
+            different screen sizes and devices.
+          </li>
+          <li>
+            Create state management examples to showcase different UI states without needing to
+            trigger them manually in your app.
+          </li>
+          <li>
+            Document accessibility features directly in your stories to ensure components meet
+            WCAG guidelines and best practices.
+          </li>
+          <li>
+            Utilize Storybook's actions addon to verify event handlers are working correctly
+            without implementing the full business logic.
+          </li>
+          <li>
+            Showcase loading states and error handling in your components to ensure a robust user
+            experience in all scenarios.
+          </li>
+          <li>
+            Implement dark mode and theming variations to demonstrate how your components adapt to
+            different visual styles.
+          </li>
+          <li>
+            Create interactive documentation with MDX to combine markdown explanations with live
+            component examples.
+          </li>
+          <li>
+            Test edge cases like extremely long text, missing data, or boundary conditions to ensure
+            your components are resilient.
+          </li>
+          <li>
+            Develop a consistent design language by showcasing your component library's core elements
+            and how they work together.
+          </li>
+          <li>
+            Integrate internationalization examples to demonstrate how your components handle
+            different languages and text directions.
+          </li>
+          <li>
+            Use Storybook's knobs addon to create interactive controls that let stakeholders
+            experiment with component properties.
+          </li>
+          <li>
+            Document component API with prop tables generated automatically from your TypeScript
+            interfaces or PropTypes.
+          </li>
+          <li>
+            Showcase animation and transition states to ensure smooth user experiences during
+            interactive moments.
+          </li>
+          <li>
+            Create visual regression tests with Storybook's snapshot capabilities to catch
+            unintended UI changes during development.
           </li>
         </ul>
         <p>

@@ -10,8 +10,8 @@ on:
     branches: [ "main" ]
 
 env:
-  SNAPSHOTS_SERVICE_URL: https://ef9a-93-179-255-178.ngrok-free.app
-  BUDDY_VT_TOKEN: bud_vt_us_s5gd67sq1ixg97gn8bvniani5dm62t
+  SNAPSHOTS_SERVICE_URL: https://a8c4-93-179-255-178.ngrok-free.app
+  BUDDY_VT_TOKEN: bud_vt_us_n00af8rtq3nto0c3qca4ymtczzgcg5
 
 jobs:
   build:
@@ -20,7 +20,12 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    - uses: pnpm/action-setup@v2
+    - name: Cache Cypress 📦
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/Cypress
+        key: my-cache-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+    - uses: pnpm/action-setup@v4
       with:
         version: 9.6.0
     - name: Use Node.js
@@ -32,4 +37,5 @@ jobs:
     - run: git branch -a
     - run: git merge-base origin/main origin/dev
     - run: pnpm i
+    - run: ./node_modules/.bin/cypress install
     - run: pnpm run test

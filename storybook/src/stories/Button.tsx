@@ -22,6 +22,7 @@ export interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  flaky?: boolean;
 }
 
 /**
@@ -32,17 +33,21 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  flaky = false,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
+    <div style={{ position: 'relative' }}>
+    {flaky && <div style={{ width: '1px', height: '1px', backgroundColor: 'orange', position: 'absolute', top: '50%', left: '50%' }} className="lama" />}
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={['storybook-button', `storybook-button--${size}`, mode, flaky ? 'flaky' : ''].filter(Boolean).join(' ')}
       style={{ backgroundColor }}
       {...props}
     >
       {label}
     </button>
+    </div>
   );
 };
