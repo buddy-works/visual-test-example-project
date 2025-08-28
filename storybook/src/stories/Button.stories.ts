@@ -81,3 +81,155 @@ export const Flaky: Story = {
     label: 'Button',
   },
 };
+
+export const Flaky2: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky3: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky4: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky5: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky6: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky7: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky8: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky9: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky10: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky11: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky12: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky13: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky14: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky15: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky16: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky17: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky18: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky19: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
+
+export const Flaky20: Story = {
+  args: {
+    primary: true,
+    flaky: true,
+    label: 'Button',
+  },
+};
