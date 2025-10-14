@@ -284,3 +284,4 @@
         - "cd storybook"
         - "npm run test"
       shell: "BASH"
+      vt_suite: my_first_suite
