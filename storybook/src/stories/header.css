@@ -30,3 +30,32 @@
   font-size: 14px;
   margin-right: 10px;
 }
+
+@media (prefers-color-scheme: dark) {
+  .storybook-header {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .storybook-header h1 {
+    color: #f8fafc;
+  }
+  
+  .storybook-header .welcome {
+    color: #e2e8f0;
+  }
+  
+  /* Target the SVG background specifically */
+  .storybook-header svg g path:first-child {
+    fill: #333;
+  }
+  
+  /* Make the blue parts of the logo slightly brighter in dark mode */
+  .storybook-header svg g path[fill="#555AB9"] {
+    fill: #6366f1;
+  }
+  
+  .storybook-header svg g path[fill="#91BAF8"] {
+    fill: #a5b4fc;
+  }
+}
