@@ -43,7 +43,7 @@
     shell: BASH
 - pipeline: qsxrnoneft
   refs:
-  - refs/heads/master
+  - refs/heads/dev
   fail_on_prepare_env_warning: true
   resources: SMALL
   actions:
