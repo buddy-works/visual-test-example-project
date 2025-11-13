@@ -2,6 +2,8 @@
   name: Run tsts LOCAL dev
   refs:
   - refs/heads/dev
+  events:
+  - type: PUSH
   fail_on_prepare_env_warning: true
   actions:
   - action: Install packages
@@ -41,18 +43,3 @@
     volume_mappings:
     - /:/buddy/visual
     shell: BASH
-- pipeline: qsxrnoneft
-  refs:
-  - refs/heads/dev
-  fail_on_prepare_env_warning: true
-  resources: SMALL
-  actions:
-  - action: Run Visual Tests 2
-    type: BUILD
-    docker_image_name: buddy/bdy
-    docker_image_tag: dev
-    execute_commands:
-    - bdy visual compare --urls https://buddy.works/
-    reset_entrypoint: true
-    shell: BASH
-    vt_suite: pipeline_vt_suite
