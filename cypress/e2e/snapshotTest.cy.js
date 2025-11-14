@@ -26,6 +26,11 @@ describe("snapshot example", () => {
         });
       });
     });
+
+    // Additional 40 screenshots
+    new Array(40).fill("").forEach((_, index) => {
+      cy.takeSnap(`Snapshot${index + 15}`);
+    });
   });
   //
   // it("Take snapshot 2", () => {
