@@ -38,7 +38,7 @@ describe("snapshot example", () => {
     });
 
     new Array(40).fill("").forEach((_, index) => {
-      cy.takeSnap(`Group 2/Snapshot${index}`);
+      cy.takeSnap(`Group 3/Snapshot${index}`);
     });
 
   });
