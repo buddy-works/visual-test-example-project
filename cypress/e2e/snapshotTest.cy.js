@@ -36,6 +36,11 @@ describe("snapshot example", () => {
     new Array(40).fill("").forEach((_, index) => {
       cy.takeSnap(`Group 1/Snapshot${index}`);
     });
+
+    new Array(40).fill("").forEach((_, index) => {
+      cy.takeSnap(`Group 2/Snapshot${index}`);
+    });
+
   });
   //
   // it("Take snapshot 2", () => {
