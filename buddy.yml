@@ -1,7 +1,7 @@
 - pipeline: run-tsts-local-dev
   name: Run tsts LOCAL dev
   refs:
-  - refs/heads/dev
+  - refs/heads/dev*
   events:
   - type: PUSH
   fail_on_prepare_env_warning: true
